@@ -1,0 +1,25 @@
+name: Pull
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  chromeHeadLess:
+    name: Chrome Headless
+    strategy:
+      fail-fast: true
+      matrix:
+        os: [windows-latest, macos-12]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@master
+        with:
+          node-version: 16.x
+      - run: npm install
+      - run: npm test

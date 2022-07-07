@@ -1,0 +1,25 @@
+{
+  "name": "demo-playwright-typescript",
+  "version": "1.0.0",
+  "description": "Playwright tests using Typescript",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "playwright install",
+    "test": "playwright test --config=config/base.config.ts",
+    "local": "playwright test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spnraju/demo-playwright-typescript.git"
+  },
+  "keywords": [],
+  "author": "Padmanabha Raju Sagi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/spnraju/demo-playwright-typescript/issues"
+  },
+  "homepage": "https://github.com/spnraju/demo-playwright-typescript#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.23.1"
+  }
+}
