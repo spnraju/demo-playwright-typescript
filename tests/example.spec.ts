@@ -43,29 +43,6 @@ test.describe('New Todo', () => {
     await expect(page.locator('.new-todo')).toBeEmpty();
     await checkNumberOfTodosInLocalStorage(page, 1);
   });
-
-  test('should append new items to the bottom of the list', async ({ page }) => {
-    // Create 3 items.
-    await createDefaultTodos(page);
-
-    // Check test using different methods.
-    await expect(page.locator('.todo-count')).toHaveText('3 items left');
-    await expect(page.locator('.todo-count')).toContainText('3');
-    await expect(page.locator('.todo-count')).toHaveText(/3/);
-
-    // Check all items in one call.
-    await expect(page.locator('.view label')).toHaveText(TODO_ITEMS);
-    await checkNumberOfTodosInLocalStorage(page, 3);
-  });
-
-  test('should show #main and #footer when items added', async ({ page }) => {
-    await page.locator('.new-todo').fill(TODO_ITEMS[0]);
-    await page.locator('.new-todo').press('Enter');
-
-    await expect(page.locator('.main')).toBeVisible();
-    await expect(page.locator('.footer')).toBeVisible();
-    await checkNumberOfTodosInLocalStorage(page, 1);
-  });
 });
 
 async function createDefaultTodos(page: Page) {
