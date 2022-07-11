@@ -23,3 +23,6 @@ jobs:
           node-version: 16.x
       - run: npm install
       - run: npm test
+        env:
+          STANDARD: ${{ secrets.STANDARD }}
+          PASSWORD: ${{ secrets.PASSWORD }}
