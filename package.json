@@ -6,7 +6,8 @@
   "scripts": {
     "postinstall": "playwright install",
     "test": "playwright test --config=config/base.config.ts",
-    "local": "playwright test"
+    "local": "playwright test",
+    "update": "npx npm-check-updates --upgrade && npm install && npm audit fix"
   },
   "repository": {
     "type": "git",
