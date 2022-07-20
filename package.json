@@ -6,7 +6,9 @@
   "scripts": {
     "postinstall": "playwright install",
     "test": "playwright test --config=config/base.config.ts",
-    "local": "playwright test",
+    "test:chrome": "npm run test -- --project=chromium",
+    "test:firefox": "npm run test -- --project=firefox",
+    "test:webkit": "npm run test -- --project=webkit",
     "update": "npx npm-check-updates --upgrade && npm install && npm audit fix"
   },
   "repository": {

@@ -1,4 +1,4 @@
-name: Pull
+name: ci-build
 
 on:
   push:
@@ -9,12 +9,13 @@ on:
       - main
 
 jobs:
-  chromeHeadLess:
-    name: Chrome Headless
+  playwright:
+    name: ${{ matrix.browser }} on ${{ matrix.os }}
     strategy:
       fail-fast: true
       matrix:
         os: [windows-latest, macos-12]
+        browser: [chrome, firefox, webkit]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@master
@@ -22,7 +23,7 @@ jobs:
         with:
           node-version: 16
       - run: npm install
-      - run: npm test
+      - run: npm run test:${{ matrix.browser }}
         env:
           STANDARD: ${{ secrets.STANDARD }}
           PASSWORD: ${{ secrets.PASSWORD }}
