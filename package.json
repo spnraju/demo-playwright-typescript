@@ -24,6 +24,6 @@
   "homepage": "https://github.com/spnraju/demo-playwright-typescript#readme",
   "devDependencies": {
     "@playwright/test": "^1.25.1",
-    "dotenv": "^16.0.1"
+    "dotenv": "^16.0.2"
   }
 }
