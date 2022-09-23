@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/spnraju/demo-playwright-typescript#readme",
   "devDependencies": {
-    "@playwright/test": "^1.25.2",
+    "@playwright/test": "^1.26.0",
     "dotenv": "^16.0.2"
   }
 }
