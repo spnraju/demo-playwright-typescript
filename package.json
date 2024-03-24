@@ -6,10 +6,10 @@
   "scripts": {
     "postinstall": "playwright install",
     "test": "playwright test --config=config/base.config.ts",
-    "test:chrome": "npm run test -- --project=chromium",
-    "test:firefox": "npm run test -- --project=firefox",
-    "test:webkit": "npm run test -- --project=webkit",
-    "update": "npm update --save"
+    "test:chrome": "yarn run test -- --project=chromium",
+    "test:firefox": "yarn run test -- --project=firefox",
+    "test:webkit": "yarn run test -- --project=webkit",
+    "update": "yarn up '**'"
   },
   "repository": {
     "type": "git",
