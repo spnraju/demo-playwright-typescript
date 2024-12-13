@@ -6,9 +6,9 @@
   "scripts": {
     "postinstall": "playwright install",
     "test": "playwright test --config=config/base.config.ts",
-    "test:chrome": "yarn run test -- --project=chromium",
-    "test:firefox": "yarn run test -- --project=firefox",
-    "test:webkit": "yarn run test -- --project=webkit",
+    "test:chrome": "yarn run test --project=chromium",
+    "test:firefox": "yarn run test --project=firefox",
+    "test:webkit": "yarn run test --project=webkit",
     "update": "yarn up '**'"
   },
   "repository": {
@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/spnraju/demo-playwright-typescript#readme",
   "devDependencies": {
-    "@playwright/test": "^1.42.1",
-    "dotenv": "^16.4.5"
+    "@playwright/test": "^1.49.1",
+    "dotenv": "^16.4.7"
   }
 }
